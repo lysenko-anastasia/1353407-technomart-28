@@ -12,8 +12,8 @@
         <a class="logo" style="background-color: red;"><!--добавила фон, потому что не видно белый логотип-->
           <img src="img/logo_technomart.svg" width="107" height="17" alt="Логотип Техномарт">
         </a>                                             
-        <form>
-          <input><!--Поле поиска. См. главу 2.7-->
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <input type="search" placeholder="Поиск:">
         </form>
         <div class="markers">
           Закладки: 0 
@@ -56,9 +56,9 @@
     </header>
 
     <main>
-      <h1>Интернет-магазин "Техномарт"</h1><!--Скрыть заголовок-->
+      <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1><!--Скрыть заголовок-->
       <section class="promo">
-        <h2>Каталог</h2><!--Скрыть заголовок-->
+        <h2 class="visually-hidden">Каталог</h2><!--Скрыть заголовок-->
         <div class="promoItem materials new">
           <h3>Материалы</h3>
           <a href="">На любой вкус</a>
@@ -216,7 +216,7 @@
         <a href="">
           <img src="img/map.jpg" width="300" height="158" alt="Фрагмент карты">
         </a><!--Модальное окно (см. ТЗ п.4.3)-->
-        <a href="">Заблудились? Напишите нам!</a><!--Модальное окно (см. ТЗ п.4.4)-->
+        <button type="submit">Заблудились? Напишите нам!</button><!--Модальное окно (см. ТЗ п.4.4)-->
       </section>      
 
     </main>
@@ -269,6 +269,31 @@
       </div>  
   
     </footer>
+
+    <section class="popup-write-us">
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <p>
+          <label for="name">Ваше имя:</label>
+          <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="email">Ваш e-mail:</label>
+          <input id="email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          Текст письма:
+        </p>
+        <textarea id="letter" name="letter" rows="3" placeholder="В свободной форме"></textarea>        
+        <button type="submit">Оформить заказ</button>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
+
+    <section class="popup-map">
+      <!--Скопировала код из гугл мэпс, что делать дальше не знаю-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1680.616333441303!2d30.320507074490674!3d59.93876436625577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1590229917995!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <button type="button">Закрыть</button>
+    </section>
 
   </body>
 </html>
